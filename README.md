@@ -1,163 +1,226 @@
 # StudyMate Agent
 
-> An AI-powered Multi-Agent Study Assistant that helps students plan, learn, practice, and improve using specialized AI agents powered by Google Gemini.
+### AI-Powered Multi-Agent Learning Assistant for Personalized Education
+
+StudyMate Agent is an intelligent multi-agent educational platform built with **Next.js**, **TypeScript**, and **Google Gemini AI**. It helps students create personalized study plans, understand difficult concepts, generate quizzes, and evaluate learning progress through specialized AI agents coordinated by a Master Agent.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue)
-![Gemini](https://img.shields.io/badge/Google-Gemini-orange)
-![Vercel](https://img.shields.io/badge/Deployed-Vercel-black)
-
-## Overview
-
-StudyMate Agent is a multi-agent educational assistant designed to help students prepare more effectively for exams and coursework.
-
-Instead of relying on a single AI assistant, StudyMate uses a Master Agent that intelligently routes student requests to specialized agents responsible for planning, teaching, assessment, and feedback.
-
-The project demonstrates how AI agents can collaborate to solve real educational challenges while providing personalized and structured learning support.
+![Google Gemini](https://img.shields.io/badge/Google-Gemini-orange)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-black)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## Problem Statement
+# Live Demo
+
+🚀 **Application:** https://studymate-20.vercel.app/
+
+---
+
+# Overview
 
 Students often struggle with:
 
 * Creating effective study plans
-* Understanding difficult concepts
+* Understanding difficult academic concepts
 * Finding quality practice questions
-* Identifying weak areas before exams
-* Managing preparation efficiently
+* Evaluating their understanding before exams
+* Managing learning efficiently
 
-Most AI chatbots provide generic responses and do not specialize in different learning tasks.
+Most AI chatbots provide generic responses regardless of the educational task.
 
-StudyMate Agent addresses this challenge through a multi-agent architecture where each agent focuses on a specific educational responsibility.
-
----
-
-## Solution
-
-StudyMate Agent provides:
-
-### Planner Agent
-
-Creates personalized study schedules, roadmaps, revision plans, and exam preparation strategies.
-
-### Tutor Agent
-
-Explains concepts in simple language using examples, analogies, and step-by-step breakdowns.
-
-### Quiz Agent
-
-Generates MCQs, practice questions, and self-assessment quizzes.
-
-### Evaluator Agent
-
-Evaluates answers, identifies mistakes, highlights weak areas, and provides improvement recommendations.
-
-### Master Agent
-
-Acts as the orchestrator and automatically routes requests to the most appropriate specialized agent.
+StudyMate Agent solves this challenge through a **Multi-Agent AI Architecture**, where each agent specializes in a specific learning responsibility, resulting in more focused, accurate, and helpful educational support.
 
 ---
 
-## Multi-Agent Architecture
+# Problem Statement
+
+Modern students have access to large amounts of information but often lack personalized guidance.
+
+Traditional study methods can be:
+
+* Time-consuming
+* Unstructured
+* Difficult to personalize
+* Inefficient for exam preparation
+
+Students frequently switch between multiple tools for planning, learning, practicing, and assessment.
+
+StudyMate Agent combines these activities into a single intelligent platform powered by specialized AI agents.
+
+---
+
+# Solution
+
+StudyMate Agent introduces a Master Agent that intelligently routes user requests to specialized educational agents.
+
+## Master Agent
+
+Acts as the central orchestrator.
+
+Responsibilities:
+
+* Understands user intent
+* Selects the most appropriate specialized agent
+* Routes requests automatically
+* Returns the final response
+
+---
+
+## Planner Agent
+
+Creates:
+
+* Study schedules
+* Exam preparation roadmaps
+* Daily learning plans
+* Revision strategies
+
+Example:
 
 ```text
-User
-  │
-  ▼
-Next.js Frontend
-  │
-  ▼
-Master Agent
-  │
-  ├───────────────┐
-  │               │
-  ▼               ▼
-Planner Agent   Tutor Agent
-  │               │
-  └───────┬───────┘
-          │
-          ▼
-      Quiz Agent
-          │
-          ▼
-   Evaluator Agent
-          │
-          ▼
-      Gemini API
-          │
-          ▼
-       Response
+I have a Data Structures exam in 7 days.
+Create a study plan.
 ```
 
 ---
 
-## Features
+## Tutor Agent
+
+Provides:
+
+* Concept explanations
+* Real-world examples
+* Analogies
+* Simplified learning material
+
+Example:
+
+```text
+Explain Binary Search in simple words.
+```
+
+---
+
+## Quiz Agent
+
+Generates:
+
+* MCQs
+* Practice questions
+* Self-assessment quizzes
+* Knowledge checks
+
+Example:
+
+```text
+Create a quiz on Object-Oriented Programming.
+```
+
+---
+
+## Evaluator Agent
+
+Performs:
+
+* Answer evaluation
+* Weak-area identification
+* Feedback generation
+* Learning recommendations
+
+Example:
+
+```text
+Evaluate my answers and identify weak areas.
+```
+
+---
+
+# Multi-Agent Architecture
+
+```text
+                    User
+                      │
+                      ▼
+             Next.js Frontend
+                      │
+                      ▼
+                Master Agent
+                      │
+       ┌──────────────┼──────────────┐
+       │              │              │
+       ▼              ▼              ▼
+ Planner Agent   Tutor Agent    Quiz Agent
+       │              │              │
+       └──────────────┼──────────────┘
+                      │
+                      ▼
+              Evaluator Agent
+                      │
+                      ▼
+                 Gemini API
+                      │
+                      ▼
+                  Response
+```
+
+---
+
+# Key Features
 
 * Multi-Agent AI Architecture
-* Intelligent Request Routing
-* Study Plan Generation
+* Intelligent Agent Routing
+* Personalized Study Planning
 * Concept Explanation
-* Quiz Creation
-* Answer Evaluation
-* Responsive User Interface
+* Quiz Generation
+* Learning Assessment
 * Secure API Key Management
-* Cloud Deployment with Vercel
-* Powered by Google Gemini
+* Responsive User Interface
+* Cloud Deployment
+* Educational AI Assistance
+* Real-Time AI Responses
+* Master Agent Orchestration
 
 ---
 
-## Technology Stack
+# Technology Stack
 
-### Frontend
-
-* Next.js 16
-* React
-* TypeScript
-* Tailwind CSS
-
-### Backend
-
-* Next.js API Routes
-* TypeScript
-
-### AI
-
-* Google Gemini API
-* @google/genai SDK
-
-### Deployment
-
-* Vercel
-
-```link
-https://studymate-20.vercel.app/
-```
+| Category     | Technology         |
+| ------------ | ------------------ |
+| Frontend     | Next.js 16         |
+| Language     | TypeScript         |
+| Styling      | Tailwind CSS       |
+| AI Model     | Google Gemini      |
+| SDK          | @google/genai      |
+| API Layer    | Next.js API Routes |
+| Deployment   | Vercel             |
+| Architecture | Multi-Agent System |
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```text
 studymate-agent/
 │
 ├── app/
 │   ├── api/
+│   │   ├── master/
 │   │   ├── planner/
 │   │   ├── tutor/
 │   │   ├── quiz/
-│   │   ├── evaluator/
-│   │   └── master/
+│   │   └── evaluator/
 │   │
 │   └── page.tsx
 │
 ├── lib/
 │   └── agents/
+│       ├── master.ts
 │       ├── planner.ts
 │       ├── tutor.ts
 │       ├── quiz.ts
-│       ├── evaluator.ts
-│       └── master.ts
+│       └── evaluator.ts
 │
 ├── public/
 │
@@ -166,14 +229,17 @@ studymate-agent/
 
 ---
 
-## Security
+# Security
 
-The application follows secure development practices:
+This project follows secure development practices.
 
-* API keys are stored in environment variables
-* No secrets are exposed to the frontend
-* Sensitive credentials are excluded from GitHub
-* `.env.local` is ignored by version control
+### Security Measures
+
+* API keys stored in environment variables
+* No secrets exposed to frontend code
+* Credentials excluded from GitHub
+* Environment variables managed through Vercel
+* Sensitive information protected during deployment
 
 Example:
 
@@ -183,15 +249,15 @@ GEMINI_API_KEY=YOUR_API_KEY
 
 ---
 
-## Local Installation
+# Local Installation
 
-Clone the repository:
+Clone repository:
 
 ```bash
-git clone https://github.com/yourusername/studymate-2.0.git
+git clone https://github.com/YOUR_USERNAME/studymate-agent.git
 ```
 
-Move into the project:
+Move into project:
 
 ```bash
 cd studymate-agent
@@ -223,41 +289,42 @@ http://localhost:3000
 
 ---
 
-## Deployment
+# Deployment
 
-This project is deployed using Vercel.
+The project is deployed on Vercel.
 
-Deployment steps:
+Deployment workflow:
 
-1. Push code to GitHub
+1. Push source code to GitHub
 2. Import repository into Vercel
-3. Add environment variables
-4. Deploy
+3. Configure environment variables
+4. Deploy application
+5. Verify production environment
 
 ---
 
-## Example Use Cases
+# Example Use Cases
 
-### Study Planning
-
-```text
-I have a Data Structures exam in 7 days.
-Create a study plan.
-```
-
-### Concept Learning
+## Study Planning
 
 ```text
-Explain Binary Search in simple words.
+I have a Linear Algebra exam in 10 days.
+Create a study roadmap.
 ```
 
-### Quiz Generation
+## Learning Concepts
 
 ```text
-Create a quiz on Object-Oriented Programming.
+Explain Recursion with a simple example.
 ```
 
-### Performance Evaluation
+## Practice Testing
+
+```text
+Create a quiz on Data Structures.
+```
+
+## Performance Assessment
 
 ```text
 Evaluate my answers and identify weak areas.
@@ -265,22 +332,24 @@ Evaluate my answers and identify weak areas.
 
 ---
 
-## Future Improvements
+# Future Enhancements
 
 * Conversation Memory
 * Student Profiles
-* Progress Tracking
+* Progress Tracking Dashboard
 * PDF Export
+* Learning Analytics
 * Subject-Specific Knowledge Bases
-* Learning Analytics Dashboard
 * Voice Interaction
 * NotebookLM Integration
+* Multi-Language Support
+* Academic Performance Insights
 
 ---
 
-## Kaggle AI Agents Capstone Project
+# Kaggle AI Agents Capstone Project
 
-This project was created as part of the:
+This project was developed for the:
 
 **AI Agents: Intensive Vibe Coding Capstone Project**
 
@@ -288,24 +357,42 @@ The solution demonstrates:
 
 * Multi-Agent Systems
 * Agent Orchestration
-* AI-Powered Learning Assistance
-* Secure Deployment Practices
-* Real-World Educational Impact
+* Educational AI Applications
+* Secure AI Deployment
+* Real-World Problem Solving
+* Human-Centered Learning Support
 
 ---
 
-## Author
+# Impact
 
-**Muhammad Sufyan Jura**
+StudyMate Agent aims to make quality educational assistance more accessible by combining planning, teaching, assessment, and feedback into a single intelligent platform.
+
+The project demonstrates how AI agents can collaborate to improve learning outcomes and support students throughout their educational journey.
+
+---
+
+# Author
+
+## Muhammad Sufyan Jura
 
 BS Computer Science Student
+National University of Modern Languages (NUML)
+Rawalpindi, Pakistan
 
-NUML University
+### Connect
 
-Pakistan
+* GitHub: https://github.com/MuhammadSufyanJura47
+* Live Demo: https://studymate-20.vercel.app/
 
 ---
 
-## License
+# License
 
-This project is released under the MIT License.
+This project is licensed under the MIT License.
+
+---
+
+### Keywords
+
+AI Agents, Multi-Agent System, Educational AI, Study Assistant, Google Gemini, Next.js, TypeScript, Personalized Learning, AI Tutor, AI Quiz Generator, Student Productivity, AI Education Platform, Learning Assistant, Agent Orchestration, Generative AI.
