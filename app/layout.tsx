@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://studymate.vercel.app"),
+  metadataBase: new URL("https://studymate-20.vercel.app/"),
   title: {
     default: "StudyMate Agent",
     template: "%s | StudyMate Agent",
