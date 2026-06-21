@@ -228,6 +228,40 @@ studymate-agent/
 ```
 
 ---
+## Architecture Diagram
+
+```mermaid
+graph TD
+    U((User))
+    UI[Next.js Frontend]
+    API[Next.js API Routes]
+    MA{Master Agent Intent Router}
+
+    PA[Planner Agent]
+    TA[Tutor Agent]
+    QA[Quiz Agent]
+    EA[Evaluator Agent]
+
+    LLM((Google Gemini API))
+
+    U --> UI
+    UI --> API
+    API --> MA
+
+    MA --> PA
+    MA --> TA
+    MA --> QA
+    MA --> EA
+
+    PA --> LLM
+    TA --> LLM
+    QA --> LLM
+    EA --> LLM
+
+    LLM --> API
+    API --> UI
+    UI --> U
+```
 
 # Security
 
