@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://studymate.vercel.app/sitemap.xml",
-    host: "https://studymate.vercel.app",
+    sitemap: "https://studymate-20.vercel.app/sitemap.xml",
+    host: "https://studymate-20.vercel.app/",
   };
 }
